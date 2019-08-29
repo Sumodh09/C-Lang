@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int arr[5],i,j,k,b,t;
+	printf("enter the array");
+	for(i=0;i<5;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	for(j=1;j<=4;j++)
+	{
+		k=arr[j];
+		b=k-1;
+		while(k<arr[b]&&(b>=0))
+		{
+			arr[b+1]=arr[b];
+			b=b-1;
+		}
+		
+		arr[b]=k;
+
+	}
+	for(t=0;t<5;t++)
+	{
+		printf("%d\t",arr[t]);
+	}
+	getch();
+	return 0;
+}
